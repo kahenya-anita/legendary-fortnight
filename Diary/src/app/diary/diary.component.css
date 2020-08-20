@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display&display=swap');
 div.container-fluid{
     margin: 2%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 div.content{
   padding-bottom: 2%;
