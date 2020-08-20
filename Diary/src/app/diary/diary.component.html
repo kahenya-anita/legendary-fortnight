@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <ng-progress></ng-progress>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 content text-left">
+      <h1 class="text-left">My Diary&nbsp;<img src="assets/images/diary.png" style="width:50px; height:50px"></h1>
+      <div *ngFor ='let diary of diarys; let i= index'>
+        <div style= "display:inline; font-weight: bold; color: rgb(247, 84, 111); letter-spacing: 1px">{{diary.entryDate}}</div> <br>
+        <div style= "display:inline" appHighlight >{{diary.title}}</div>&nbsp;
+        <i class="fas fa-chevron-down" (click)="toggleDescriptions(i)"></i>
+        <app-entry-details *ngIf='diary.showDescription' [diary]='diary' (seeLess) = 'showingLess($event,i)'></app-entry-details>
+        <!--p *ngIf='diarys.length < 1'>Please make diary entries to view diary content.</p-->
+      </div><br>
+    </div>
+    <div class="col-md-5">
+      <app-entry-form (addEntry)= "addDiaryEntry($event)"></app-entry-form>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+  
+  

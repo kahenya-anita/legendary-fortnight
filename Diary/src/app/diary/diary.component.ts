@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DiaryEntry } from '../diary-entry';
+import { DiaryService } from '../diary.service';
+import { AlertService } from '../alert.service';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-diary',
+  templateUrl: './diary.component.html',
+  styleUrls: ['./diary.component.css']
 })
-export class AppComponent implements OnInit {
+export class DiaryComponent implements OnInit {
   diarys:DiaryEntry[];
   alertService:AlertService;
 
@@ -34,4 +36,3 @@ export class AppComponent implements OnInit {
   }
 
 }
-
